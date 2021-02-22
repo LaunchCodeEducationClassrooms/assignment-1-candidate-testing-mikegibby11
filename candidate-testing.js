@@ -16,16 +16,15 @@ let candidateAnswers = [];
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 
-
-candidateName = input.question("Please enter your name: ");
+  candidateName = input.question("Please enter your name: ");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-for (let i = 0; i < 5; i++) {
-  candidateAnswers.push(input.question(`${questions[i]}`));
-}
+  for (let i = 0; i < 5; i++) {
+    candidateAnswers.push(input.question(`${questions[i]}`));
+  }
 
 }
 
@@ -63,8 +62,10 @@ if (candidateAnswers[4].toLowerCase() === correctAnswers[4].toLowerCase()) {
 } else (numberCorrectAnswers = numberCorrectAnswers + 0)
 
 
-let grade = ((numberCorrectAnswers / 5)*100);
+{let grade = ((numberCorrectAnswers / 5)*100);
 console.log(`\n>>> OVERALL GRADE: ${grade}% (${numberCorrectAnswers} out of 5 correct). <<<`)
+
+return grade;}
 
 if (grade >= 80){
   console.log(">>> STATUS: PASSED <<<")
@@ -73,10 +74,6 @@ if (grade >= 80){
 }
 
 
-
-
-  
-  return grade;
 }
 
 function runProgram() {
